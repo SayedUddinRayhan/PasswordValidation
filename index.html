@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css'
+        integrity='sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w=='
+        crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
+        integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=='
+        crossorigin='anonymous' />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passField">
+                <i class="fa-solid fa-eye-slash" id="eye"></i>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div id="box2">
+        <h4>Password must contain</h4>
+        <ul>
+
+            <li id="letter" class="invalid"><i class="fa fa-times" aria-hidden="true"></i> At least <strong>one
+                    letter</strong></li>
+            <li id="capital" class="invalid"><i class="fa fa-times" aria-hidden="true"></i> At least <strong>one
+                    capital letter.</strong></li>
+            <li id="number" class="invalid"><i class="fa fa-times" aria-hidden="true"></i> At least <strong>one
+                    number.</strong></li>
+            <li id="length" class="invalid"><i class="fa fa-times" aria-hidden="true"></i> At least <strong>8
+                    character.</strong></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

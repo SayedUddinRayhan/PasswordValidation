@@ -1,0 +1,46 @@
+body {
+    background-color: aqua;
+}
+
+.mb-3 {
+    position: relative;
+}
+
+.fa-solid {
+    position: absolute;
+    left: 215px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+#box {
+    max-width: 400px;
+    margin: 100px auto;
+    border: 2px solid #050505;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#box2 {
+    position: absolute;
+    width: 250px;
+
+    padding: 15px;
+    background: white;
+    z-index: 55;
+    border-radius: 5px;
+    margin-left: 890px;
+    margin-top: -260px;
+}
+
+#box2 ul li {
+    list-style-type: none;
+}
+
+.invalid {
+    color: red;
+}
+
+.valid {
+    color: green;
+}
