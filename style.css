@@ -44,3 +44,9 @@ body {
 .valid {
     color: green;
 }
+
+.hide {
+    visibility: hidden;
+}
+
+.unhide

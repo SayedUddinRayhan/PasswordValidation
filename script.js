@@ -19,6 +19,15 @@ passField.addEventListener('keyup', function () {
     validation(passField.value);
 })
 
+passField.addEventListener('focus', function () {
+    removeClass("#box2", "hide");
+})
+
+passField.addEventListener('blur', function () {
+    addClass("#box2", "hide");
+})
+
+
 function validation(passValue) {
     if (passValue.length >= 8) {
         valid("#length");
