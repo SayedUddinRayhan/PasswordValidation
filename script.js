@@ -33,7 +33,25 @@ function validation(passValue) {
         addIcon("#length", "fa-times");
         removeIcon("#length", "fa-check");
     }
+
+
+    if (passValue.match(/[A-z]/)) {
+        addClass("#letter", "valid");
+        removeClass("#letter", "invalid");
+
+        addIcon("#letter", "fa-check");
+        removeIcon("#letter", "fa-times");
+    } else {
+        addClass("#letter", "invalid");
+        removeClass("#letter", "valid");
+
+        addIcon("#letter", "fa-times");
+        removeIcon("#letter", "fa-check");
+    }
 }
+
+
+
 
 function addClass(id, cl) {
     document.querySelector(id).classList.add(cl);
@@ -44,9 +62,9 @@ function removeClass(id, cl) {
 }
 
 function addIcon(id, cl) {
-    document.querySelector(id).firstChild.add(cl);
+    document.querySelector(id).firstChild.classList.add(cl);
 }
 
 function removeIcon(id, cl) {
-    document.querySelector(id).firstChild.add(cl);
+    document.querySelector(id).firstChild.classList.remove(cl);
 }
