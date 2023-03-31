@@ -38,6 +38,12 @@ function validation(passValue) {
     } else {
         invalid("#capital");
     }
+
+    if (passValue.match(/\d/)) {
+        valid("#number");
+    } else {
+        invalid("#number");
+    }
 }
 
 
