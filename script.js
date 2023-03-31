@@ -20,17 +20,33 @@ passField.addEventListener('keyup', function () {
 })
 
 function validation(passValue) {
-    let length1 = document.querySelector("#length");
-    let icon = document.querySelector("#length").firstChild;
     if (passValue.length >= 8) {
-        length1.classList.add("valid");
-        length1.classList.remove("invalid");
-        icon.classList.add("fa-check");
-        icon.classList.remove("fa-times");
+        addClass("#length", "valid");
+        removeClass("#length", "invalid");
+
+        addIcon("#length", "fa-check");
+        removeIcon("#length", "fa-times");
     } else {
-        length1.classList.add("invalid");
-        length1.classList.remove("valid");
-        icon.classList.add("fa-times");
-        icon.classList.remove("fa-check");
+        addClass("#length", "invalid");
+        removeClass("#length", "valid");
+
+        addIcon("#length", "fa-times");
+        removeIcon("#length", "fa-check");
     }
+}
+
+function addClass(id, cl) {
+    document.querySelector(id).classList.add(cl);
+}
+
+function removeClass(id, cl) {
+    document.querySelector(id).classList.remove(cl);
+}
+
+function addIcon(id, cl) {
+    document.querySelector(id).firstChild.add(cl);
+}
+
+function removeIcon(id, cl) {
+    document.querySelector(id).firstChild.add(cl);
 }
