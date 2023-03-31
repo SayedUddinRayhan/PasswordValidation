@@ -21,35 +21,35 @@ passField.addEventListener('keyup', function () {
 
 function validation(passValue) {
     if (passValue.length >= 8) {
-        addClass("#length", "valid");
-        removeClass("#length", "invalid");
-
-        addIcon("#length", "fa-check");
-        removeIcon("#length", "fa-times");
+        valid("#length");
     } else {
-        addClass("#length", "invalid");
-        removeClass("#length", "valid");
-
-        addIcon("#length", "fa-times");
-        removeIcon("#length", "fa-check");
+        invalid("#length");
     }
 
 
     if (passValue.match(/[A-z]/)) {
-        addClass("#letter", "valid");
-        removeClass("#letter", "invalid");
-
-        addIcon("#letter", "fa-check");
-        removeIcon("#letter", "fa-times");
+        valid("#letter");
     } else {
-        addClass("#letter", "invalid");
-        removeClass("#letter", "valid");
-
-        addIcon("#letter", "fa-times");
-        removeIcon("#letter", "fa-check");
+        invalid("#letter");
     }
 }
 
+
+function valid(id) {
+    addClass(id, "valid");
+    removeClass(id, "invalid");
+
+    addIcon(id, "fa-check");
+    removeIcon(id, "fa-times");
+}
+
+function invalid(id) {
+    addClass(id, "invalid");
+    removeClass(id, "valid");
+
+    addIcon(id, "fa-times");
+    removeIcon(id, "fa-check");
+}
 
 
 
