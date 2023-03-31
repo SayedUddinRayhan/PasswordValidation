@@ -32,6 +32,12 @@ function validation(passValue) {
     } else {
         invalid("#letter");
     }
+
+    if (passValue.match(/[A-Z]/)) {
+        valid("#capital");
+    } else {
+        invalid("#capital");
+    }
 }
 
 
